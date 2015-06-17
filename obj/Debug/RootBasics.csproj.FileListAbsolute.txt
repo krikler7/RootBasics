@@ -1,0 +1,5 @@
+E:\Documents\Visual Studio 2015\Projects\population\RootBasics\RootBasics\bin\Debug\RootBasics.dll
+E:\Documents\Visual Studio 2015\Projects\population\RootBasics\RootBasics\bin\Debug\RootBasics.pdb
+E:\Documents\Visual Studio 2015\Projects\population\RootBasics\RootBasics\obj\Debug\RootBasics.csprojResolveAssemblyReference.cache
+E:\Documents\Visual Studio 2015\Projects\population\RootBasics\RootBasics\obj\Debug\RootBasics.dll
+E:\Documents\Visual Studio 2015\Projects\population\RootBasics\RootBasics\obj\Debug\RootBasics.pdb
