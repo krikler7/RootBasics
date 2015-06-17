@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RootBasics</name>
+    </assembly>
+    <members>
+        <member name="T:RootBasics.Maths">
+            <summary>
+            Maths operations
+            </summary>
+        </member>
+        <member name="M:RootBasics.Maths.fac(System.Int32)">
+            <summary>
+            Finds the factorial of an int in the form of a float
+            </summary>
+            <param name="n">The number to operate on</param>
+            <returns>Float n!</returns>
+        </member>
+        <member name="M:RootBasics.Maths.facInt(System.Int32)">
+            <summary>
+            Finds the factorial of an int and returns an int
+            </summary>
+            <param name="n">The number</param>
+            <returns>Int n!</returns>
+        </member>
+        <member name="T:RootBasics.Display">
+            <summary>
+            Methods relating to the console display
+            </summary>
+        </member>
+        <member name="M:RootBasics.Display.writeAt(System.Int32,System.Int32,System.String,System.ConsoleColor,System.ConsoleColor)">
+            <summary>
+            Write a string to the console at a given position
+            </summary>
+            <param name="x">Collumn (from the left) to write at</param>
+            <param name="y">Row (from the top) to write at</param>
+            <param name="message">The string to write</param>
+            <param name="foreground">Optional foreground colour (default is gray)</param>
+            <param name="background">Optional background colour (default is black)</param>
+        </member>
+        <member name="M:RootBasics.Display.selector(System.String[],System.Int32,System.Int32)">
+            <summary>
+            Creates a selector with various options for the user to chose from. User must press enter to select
+            </summary>
+            <param name="options">The options to be displayed to the user</param>
+            <param name="x">The collumn (from the left) to display the selector from</param>
+            <param name="y">The row (from the top) to display the selector on</param>
+            <returns>The zero-based index of the option selected by the user.</returns>
+        </member>
+        <member name="M:RootBasics.Display.clearLine(System.Int32)">
+            <summary>
+            Clear a given line
+            </summary>
+            <param name="y">The row (from the top) to clear</param>
+        </member>
+    </members>
+</doc>
