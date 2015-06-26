@@ -143,5 +143,57 @@ namespace RootBasics
         {
             writeAt(0, y, "                                                                        ");
         }
+
+        /// <summary>
+        /// Displays a distribution input prompt in the form X ~ D(
+        /// </summary>
+        /// <param name="varName">The name of the variable to be displayed</param>
+        /// <param name="distributionType">The distribution type to be displayed to the user (i.e. B for Binomial, P for Poisson)</param>
+        /// <param name="numberOfVariables">The number of variables</param>
+        /// <param name="x">The collumn (from left) to write at</param>
+        /// <param name="y">The row (from the top) to write at</param>
+        /// <returns></returns>
+        public static double[] distributionInput(string varName, string distributionType, int numberOfVariables, int x, int y)
+        {
+            Display.writeAt(x, y, varName + " ~ " + distributionType + "(");
+
+            int consolePositionAtInput = Console.CursorLeft;
+
+            double[] varReturns = new double[numberOfVariables];
+
+
+
+            for (int i = 1; i <= numberOfVariables; i++)
+            {
+                string k = Console.ReadLine();
+
+                double id = 0.0;
+                while (!double.TryParse(k, out id))
+                {
+                    Display.writeAt(consolePositionAtInput, y, "Invalid input, please enter a number");
+                    Console.ReadKey();
+                    Display.writeAt(consolePositionAtInput, y, "                                     ");
+                    Console.SetCursorPosition(consolePositionAtInput, y);
+                    k = Console.ReadLine();
+                }
+
+                varReturns[i - 1] = double.Parse(k);
+
+
+                if (i == numberOfVariables)
+                {
+                    Display.writeAt(consolePositionAtInput + k.Length, y, ")");
+                }
+                else
+                {
+                    Display.writeAt(consolePositionAtInput + k.Length, y, ", ");
+                }
+
+                consolePositionAtInput += k.Length + 2;
+
+            }
+
+            return varReturns;
+        }
     }
 }
